@@ -1,0 +1,349 @@
+﻿QComboBox{
+	background-color:#ffffff;
+}
+QGroupBox{
+	border:none;
+	background-color:transparent;
+}
+
+#label_bule{
+	background-color:#1769c1;
+}
+#label_gray{
+	background-color:#f0f3f8;
+}
+QTabWidget::pane
+{
+	border-top-width:5px;
+	border-width:3px;
+	border-top-color: rgb(86, 104, 138);
+	border-top-style:solid;
+	margin-top:-4px;
+}
+QTabBar::tab
+{
+	font-size:14px;
+	font-weight:bold;
+	color: rgb(86,104,138);
+	background-image: url(:/image/Image/FlightsTab2.png);
+	width: 110px;
+	height:35px;
+	border: 0px;
+	padding: 2px;
+	background-repeat: fixed;
+	font-family: "微软雅黑";
+	margin-left: -8; margin-right: 0;
+}
+QTabBar::tab:selected
+{
+	color: rgb(255,255,255);
+	background-image: url(:/image/Image/FlightsTabSel2.png);
+	width: 110px;
+	height:35px;
+	background-repeat: fixed;
+}
+QTabBar::tab:last:selected
+{
+	color: rgb(255,255,255);
+	background-image: url(:/image/Image/FlightsTabSel2.png);
+	width: 110px;
+	height:35px;
+	background-repeat: fixed;
+}
+QTabBar::tab:last
+{
+	background-image: url(:/image/Image/FlightsTab3.png);
+}
+
+QLabel[statusTip="showline"]:hover
+{
+	border:1px;
+	border-bottom-style:double;
+	border-bottom-color:#7383a1;
+	color:#56688a;
+}
+QLabel[statusTip="showlinetable"]:hover
+{
+	border:1px;
+	border-bottom-style:double;
+	border-bottom-color:#0474c8;
+	color:#0474c8;
+}
+QLabel[statusTip="redStar"]
+{
+	color:rgb(255,0,0);
+	font-family: 宋体;
+	font-size:12px;
+	font-weight:bold;
+}
+QLabel[statusTip="numeric"]
+{
+    font-family: Arial;
+}
+QPushButton,QLabel,QLineEdit,QTextEdit{
+	font-family: 微软雅黑;
+}
+#labeltitle,labeltitle_2,labeltitle_3{
+	font-family: 微软雅黑;
+	color:#56688a;
+	font-size: 16px;
+	font-weight:bold;
+}
+
+QLabel{
+	font-family: 微软雅黑;
+	color:#56688a; 
+	font-size: 14px;
+	float:right;
+}
+QLabel[statusTip="redStar"]
+{
+    color: rgb(255, 0, 0);
+}
+
+#label_client_name1,#label_enterprisetype,#label_phonenum,#label_email,
+#label_addres,#label_organizationscale,#label_organizationtype,#label_industrytype,#label_accounttype
+#label_paymode{
+	color:#7c8ba7;
+	font-family: 微软雅黑;
+	font-size: 14px;
+}
+#label_accountnum,#label_impowerlimit{
+	color:#56688a;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight:bold;
+}
+#label_bankplace,#label_dingjiaxishu,#label_payCoupon{
+	color:#a1aab9;
+	font-family: 微软雅黑;
+	font-size: 14px;
+}	
+#label_fengexian,#label_fengexian2,#label_fengexian3{
+	background-color:#d2d9e5;
+} 
+QComboBox{
+	font-family: 微软雅黑; 
+	color:#7c8ba7; 
+	border-radius: 1px; 
+	padding: 1px 2px 1px 10px;  
+	border: 1px solid #c8d0de;
+	font-size: 14px;
+	background-color:#ffffff;
+}
+QComboBox::drop-down {
+	subcontrol-origin: padding; 
+	width: 20px;  
+	border-left-width: 0px; 
+	font-size: 14px;
+	background-color:#ffffff;
+}
+QComboBox::down-arrow {
+	image: url(:/image/index/Image/index/commbox-background.png); 
+	subcontrol-position:left; 
+	background-repeat:no-repeat;
+	background-color:#ffffff;
+}
+QComboBox QAbstractItemView {
+	border:1px solid #7c8ba7;
+	selection-background-color:;
+	color:#7c8ba7 ;
+	font-family: 微软雅黑;
+	font-size: 14px;
+	background-color:#ffffff;
+}						  
+QLineEdit{
+	font-family: 微软雅黑; 
+	color:#7c8ba7;
+	font-size: 14px;  
+	background-color: #ffffff;
+	border:1px solid #c8d0de;
+	padding: 1px 2px 1px 10px;
+}
+QTextEdit{
+	font-family: 微软雅黑; 
+	color:#7c8ba7;
+	font-size: 14px;  
+	background-color: #ffffff;
+	border:1px solid #c8d0de;
+	padding: 1px 2px 1px 10px;
+}
+#lineEditimpowerlimit,#lineEditaccountnum{				
+	font-size: 14px;  
+	background-color: #ffffff;
+	height:200px;border:1px solid #d2d9e5;
+	padding: 1px 2px 1px 10px;
+	color:#56688a;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight:bold;
+}
+#label_red,#label_red1,#label_red3{
+	color: rgb(255, 0, 0);
+	padding-top:5px;
+}	
+QCheckBox{
+	font-family: 微软雅黑;
+	color:#56688a; 
+	font-size: 14px;
+	background-color:#fff;
+}
+QCheckBox::indicator {
+     width: 12px;
+     height: 12px;
+}
+QCheckBox::indicator::unchecked {
+    background-image: url(:/image/index/Image/index/checkbox.png);
+	background-position: right;
+	background-repeat:no-repeat;
+	margin-top:2px;
+ }
+
+QCheckBox::indicator:unchecked:pressed {
+    background-image: url(:/image/index/Image/index/checkbox.png);
+	background-position: left;
+	background-repeat:no-repeat;
+	margin-top:2px;
+	
+ }
+
+QCheckBox::indicator::checked {
+     background-image: url(:/image/index/Image/index/checkbox.png);
+	background-position: left;
+	background-repeat:no-repeat;
+	margin-top:2px;
+ }
+
+QCheckBox::indicator:checked:pressed {
+     background-image: url(:/image/index/Image/index/checkbox.png);
+	background-position: right;
+	background-repeat:no-repeat;
+	margin-top:2px;
+ }
+QHeaderView::section
+{
+	background-color: rgb(224, 228, 239);	
+	border: 0px solid #6c6c6c;
+}
+QHeaderView
+{
+	background-color: rgb(224, 228, 239);
+}
+QTreeWidget
+{
+	border:0px;
+}
+QTreeWidget::item
+{
+	border-left:0px solid rgb(204,212,225);
+	border-right:0px solid rgb(204,212,225);
+	border-top:1px solid rgb(204,212,225);
+	border-bottom:1px solid rgb(204,212,225);
+	background-color: #fff;
+	margin-top:-1px;
+	height:40;
+}
+QTreeWidget::item:last
+{
+	border-bottom:1px solid rgb(204,212,225);
+}
+QTreeWidget::item:first:hover
+{
+	border-left:3px solid rgb(204,212,225);;
+	border-right:0px solid rgb(204,212,225);
+	border-top:1px solid rgb(204,212,225);
+	background-color: #efefef;
+}
+QTreeWidget::item:hover
+{
+	border-left:0px solid rgb(204,212,225);
+	border-right:0px solid rgb(204,212,225);
+	border-top:1px solid rgb(204,212,225);
+	background-color: #efefef;
+}
+
+QRadioButton{
+	font-family: 微软雅黑; 
+	color:#7c8ba7;
+	font-size: 14px;  
+	spacing: 5px;
+	
+}	
+QRadioButton::indicator {
+     width: 13px;
+     height: 13px;
+ }
+ QRadioButton::indicator {  
+  width: 13px;
+  height: 13px;
+  padding-top:5px;
+}
+ QRadioButton::indicator::unchecked {
+    background-image: url(:/image/index/Image/index/radio.png);
+	background-position: right;
+	background-repeat:no-repeat;
+ }
+ QRadioButton::indicator:unchecked:pressed {
+	background-image: url(:/image/index/Image/index/radio.png);
+	background-position: left;
+	background-repeat:no-repeat;
+ }
+ QRadioButton::indicator::checked {
+    background-image: url(:/image/index/Image/index/radio.png);
+	background-position: left;
+	background-repeat:no-repeat;
+ }
+ QRadioButton::indicator:checked:pressed {
+	background-image: url(:/image/index/Image/index/radio.png);
+	background-position: right;
+	background-repeat:no-repeat;
+ }
+QLineEdit{
+	font-family: 微软雅黑; 
+	color:#7c8ba7;
+	font-size: 14px;  
+	background-color: #ffffff;	
+	height:32px;
+	border:1px solid #c8d0de;
+	padding: 1px 2px 1px 10px;
+}
+
+
+QHeaderView{
+        border: none;
+        border-bottom: 3px solid rgb(0, 160, 230);
+        background: rgb(57, 58, 60);
+        min-height: 30px;
+}
+QHeaderView::section:horizontal {
+        border: none;
+        color: white;
+        background: transparent;
+        padding-left: 5px;
+}
+QHeaderView::section:horizontal:hover {
+        background: rgb(0, 160, 230);
+}
+QHeaderView::section:horizontal:pressed {
+        background: rgb(0, 180, 255);
+}
+QHeaderView::up-arrow {
+        width: 13px;
+        height: 11px;
+        padding-right: 5px;
+        image: url(:/Black/topArrow);
+        subcontrol-position: center right;
+}
+QHeaderView::up-arrow:hover, QHeaderView::up-arrow:pressed {
+        image: url(:/Black/topArrowHover);
+}
+QHeaderView::down-arrow {
+        width: 13px;
+        height: 11px;
+        padding-right: 5px;
+        image: url(:/Black/bottomArrow);
+        subcontrol-position: center right;
+}
+QHeaderView::down-arrow:hover, QHeaderView::down-arrow:pressed {
+        image: url(:/Black/bottomArrowHover);
+}
