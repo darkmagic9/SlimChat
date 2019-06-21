@@ -120,7 +120,7 @@ class TIM(QWidget, Ui_Form_For_Main):
 		self.treeWidget.setIndentation(0)
 		self.treeWidget.setColumnCount(1)
 		self.treeWidget.setColumnWidth(0, 50)
-		self.treeWidget.setHeaderLabels(['好友'])
+		self.treeWidget.setHeaderLabels(['Friend'])
 		self.treeWidget.header().hide()
 		self.treeWidget.setIconSize(QSize(70, 70))
 		self.treeWidget.setFocusPolicy(Qt.NoFocus)
@@ -210,9 +210,9 @@ class TIM(QWidget, Ui_Form_For_Main):
 					break
 			filename, file = data.split('\n'.encode('utf-8'), 1)
 			filename = filename.decode('utf-8')
-			response = QMessageBox.question(None, "消息", "好友%s (%s)发来文件 %s，您愿意接受吗？"%(name ,id, filename), QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
+			response = QMessageBox.question(None, "Message", "Friend %s (%s) Send file %s，Would you like to accept it?"%(name ,id, filename), QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
 			if response == QMessageBox.Yes:
-				filepath = QFileDialog.getSaveFileName(None, '另存为', './'+filename, '')
+				filepath = QFileDialog.getSaveFileName(None, 'Save as', './'+filename, '')
 				if filepath[0]:
 					with open(filepath[0], 'wb') as f:
 						f.write(file)
@@ -226,13 +226,13 @@ class TIM(QWidget, Ui_Form_For_Main):
 				if id == user['userid']:
 					name = user['username']
 					break
-			QMessageBox.information(None, '消息', '好友 %s (%s) 已接收文件 %s'%(name, id, data.decode('utf-8')))
+			QMessageBox.information(None, 'Message', 'Friend %s (%s) Received file %s'%(name, id, data.decode('utf-8')))
 		elif type == Type.FILE_RF:
 			for user in self.userslist:
 				if id == user['userid']:
 					name = user['username']
 					break
-			QMessageBox.information(None, '消息', '好友 %s (%s) 拒绝接收文件 %s'%(name, id, data.decode('utf-8')))
+			QMessageBox.information(None, 'Message', 'Friend %s (%s) 拒绝接收文件 %s'%(name, id, data.decode('utf-8')))
 		else:
 			if id in self.chatWindow.keys() and self.chatWindow[id].isVisible():
 				if type == Type.TEXT:
@@ -306,7 +306,7 @@ class TIM(QWidget, Ui_Form_For_Main):
 
 
 	def changeFace(self):
-		file = QFileDialog.getOpenFileName(self, '选择背景', '.', ("Images (*.png *.jpg *.bmp)"))
+		file = QFileDialog.getOpenFileName(self, 'Select background', '.', ("Images (*.png *.jpg *.bmp)"))
 		if file[0]:
 			palette = QPalette()
 			palette.setBrush(self.backgroundRole(), QtGui.QBrush(QtGui.QPixmap(file[0])))
@@ -315,7 +315,7 @@ class TIM(QWidget, Ui_Form_For_Main):
 
 
 	def noExist(self, id):
-		QMessageBox.information(self, '提示', '不存在账号为%s的用户！'%(id))
+		QMessageBox.information(self, 'Prompt', 'There is no account number %s User!'%(id))
 		for k, v in self.temp.items():
 			if k == id:
 				self.temp.pop(k)
@@ -344,14 +344,14 @@ class TIM(QWidget, Ui_Form_For_Main):
 
 
 	def offline(self, id):
-		QMessageBox.information(self, '提示', '账号为%s的用户不在线上！'%(id))
+		QMessageBox.information(self, 'Prompt', 'Account number is %s Users are not online!'%(id))
 		for k, v in self.temp.items():
 			if k == id:
 				self.temp.pop(k)
 				break
 
 	def dealRefuseAdd(self, id):
-		QMessageBox.information(self, '提示', '账号为%s的用户拒绝你的好友请求！'%id)
+		QMessageBox.information(self, 'Prompt', 'Account number is %s User rejects your friend request!'%id)
 		for k, v in self.temp.items():
 			if k == id:
 				self.temp.pop(k)
@@ -376,11 +376,11 @@ class TIM(QWidget, Ui_Form_For_Main):
 
 
 	def dealBeAdded(self, widget):
-		reply = QMessageBox.question(self, '好友添加提示', '%s(%s)添加你为好友'%(widget.name, widget.id), QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
+		reply = QMessageBox.question(self, 'Friend add Prompt', '%s(%s)Add you as a friend'%(widget.name, widget.id), QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
 		if reply == QMessageBox.No:
 			self.client.dealRefuseAdded(widget.id)
 		else:
-			info = ['我的好友', widget.name]
+			info = ['my good friend', widget.name]
 			dialog = Add_Dialog(info)
 			for g in self.grouplist:
 				dialog.comboBox.addItem(g['groupname'])
@@ -550,7 +550,7 @@ class TIM(QWidget, Ui_Form_For_Main):
 		return randname, randicon, font, isvip, ishider
 
 	def searchIcon(self, gpname2):
-		if gpname2.find('好友') >= 0:
+		if gpname2.find('Friend') >= 0:
 			return QIcon('img/buddy.ico')
 		elif gpname2.find('同事'):
 			return QIcon('img/partner.ico')
@@ -601,10 +601,10 @@ class TIM(QWidget, Ui_Form_For_Main):
 				useritem = self.userslist[useritemindex]['user']
 				self.treeWidget.setCurrentItem(useritem)
 			else:
-				QMessageBox.information(self, '消息', '不存在此好友！')
+				QMessageBox.information(self, 'Message', 'This friend does not exist!')
 
 	def closeEvent(self, event):
-		reply = QMessageBox.question(self, '提示', '确定要退出程序吗？', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+		reply = QMessageBox.question(self, 'Prompt', 'Are you sure you want to quit the program?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
 		if reply == QMessageBox.No:
 			event.ignore()
 		else:
@@ -818,10 +818,10 @@ class TIM(QWidget, Ui_Form_For_Main):
 		hituser = self.treeWidget.currentItem()
 		widget = self.treeWidget.itemWidget(hituser, 0)
 		uindex = self.searchuser(hituser)
-		unewname, ok = QInputDialog.getText(self, '提示信息', '请输入备注名称')
+		unewname, ok = QInputDialog.getText(self, 'Prompt Information', 'Please enter a note name')
 		if ok:
 			if len(unewname) == 0:
-				QMessageBox.information(self, '提示', '备注名称不能为空')
+				QMessageBox.information(self, 'Prompt', 'Note name cannot be empty')
 			else:
 				widget.name.setText(unewname)
 				self.userslist[uindex]['username'] = unewname
@@ -865,10 +865,10 @@ class TIM(QWidget, Ui_Form_For_Main):
 
 
 	def addgroup(self):
-		gname, ok = QInputDialog.getText(self, '提示信息', '请输入分组名称')
+		gname, ok = QInputDialog.getText(self, 'Prompt Information', 'Please enter a group name')
 		if ok:
 			if len(gname) == 0:
-				QMessageBox.information(self, '提示', '分组名称不能为空')
+				QMessageBox.information(self, 'Prompt', 'Group name cannot be empty')
 			else:
 				hidernum = 0
 				group = QTreeWidgetItem(self.treeWidget)
@@ -898,10 +898,10 @@ class TIM(QWidget, Ui_Form_For_Main):
 
 	def renamegroup(self):
 		hitgroup = self.treeWidget.currentItem()
-		gnewname, ok = QInputDialog.getText(self, '提示', '请输入新的分组名称')
+		gnewname, ok = QInputDialog.getText(self, 'Prompt', 'Please enter a new group name')
 		if ok:
 			if len(gnewname) == 0:
-				QMessageBox.information(self, '提示', '分组名称不能为空')
+				QMessageBox.information(self, 'Prompt', 'Group name cannot be empty')
 			else:
 				hitgroup.setText(0, gnewname)
 				newicon = self.searchIcon(hitgroup.text(0))
@@ -917,7 +917,7 @@ class TIM(QWidget, Ui_Form_For_Main):
 	def deletegroup(self):
 		hitgroup = self.treeWidget.currentItem()
 		gindex = self.searchgroup(hitgroup)
-		reply = QMessageBox.question(self, '警告', '确定要删除这个分组吗?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+		reply = QMessageBox.question(self, 'Warning', 'Are you sure you want to delete this group?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
 		if reply == QMessageBox.Yes:
 			self.treeWidget.takeTopLevelItem(gindex)
 			groupname = self.grouplist[gindex]['groupname']
@@ -970,7 +970,7 @@ from PyQt5.QtGui import QPalette
 from PyQt5 import QtGui
 if __name__ == '__main__':
 	app = QApplication(sys.argv)
-	style = open('style5.qss').read()
+	style = open('styles/style5.qss').read()
 	c = TIM()
 	c.show()
 	sys.exit(app.exec_())
