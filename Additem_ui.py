@@ -22,7 +22,7 @@ class Ui_Dialog_For_Additem(object):
         font.setFamily("微软雅黑")
         font.setPointSize(10)
         self.lineEdit.setFont(font)
-        self.lineEdit.setPlaceholderText("请输入需要添加的好友的账号")
+        self.lineEdit.setPlaceholderText("Please enter the account number of the friend you want to add.")
         self.lineEdit.setClearButtonEnabled(False)
         self.lineEdit.setObjectName("lineEdit")
         self.top = QtWidgets.QWidget(Dialo)
@@ -56,9 +56,9 @@ class Ui_Dialog_For_Additem(object):
     def retranslateUi(self, Dialo):
         _translate = QtCore.QCoreApplication.translate
         Dialo.setWindowTitle(_translate("Dialo", "Dialog"))
-        self.lineEdit.setToolTip(_translate("Dialo", "请输入用户账号"))
-        self.closeBt.setToolTip(_translate("Dialo", "关闭"))
-        self.pbAdd.setText(_translate("Dialo", "立即添加"))
-        self.label_2.setText(_translate("Dialo", "联系人账号"))
-        self.label_3.setText(_translate("Dialo", "联系人分组"))
+        self.lineEdit.setToolTip(_translate("Dialo", "Please enter a user account"))
+        self.closeBt.setToolTip(_translate("Dialo", "Exit"))
+        self.pbAdd.setText(_translate("Dialo", "Add it now"))
+        self.label_2.setText(_translate("Dialo", "Contact account"))
+        self.label_3.setText(_translate("Dialo", "Contact grouping"))
 

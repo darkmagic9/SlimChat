@@ -100,7 +100,7 @@ class Ui_Form_For_Main(object):
 
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("img/friend.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.tabWidget.addTab(self.friendList, icon1, "好友")
+        self.tabWidget.addTab(self.friendList, icon1, "Friend")
 
         self.groupList = QtWidgets.QWidget()
         self.groupList.setObjectName("groups")
@@ -113,7 +113,7 @@ class Ui_Form_For_Main(object):
 
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap("img/group.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.tabWidget.addTab(self.groupList, icon2, "群组")
+        self.tabWidget.addTab(self.groupList, icon2, "Group")
 
 
         self.retranslateUi(Form)
@@ -122,14 +122,14 @@ class Ui_Form_For_Main(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.lineEdit.setToolTip(_translate("Form", "搜索好友"))
-        self.lineEdit.setPlaceholderText(_translate("Form", "搜索"))
-        self.lblHead.setToolTip(_translate("Form", "头像"))
-        self.bt_search.setToolTip(_translate("Form", " 搜索"))
-        self.lblName.setToolTip(_translate("Form", "昵称"))
-        self.lblId.setToolTip(_translate("Form", "账号"))
-        self.closeBt.setToolTip(_translate("Form", "关闭"))
-        self.minBt.setToolTip(_translate("Form", "最小化"))
-        self.setupBt.setToolTip(_translate("Form", "设置"))
-        self.bt_adduser.setToolTip(_translate("Form", "添加好友"))
+        self.lineEdit.setToolTip(_translate("Form", "Search for friends"))
+        self.lineEdit.setPlaceholderText(_translate("Form", "Search"))
+        self.lblHead.setToolTip(_translate("Form", "Avatar"))
+        self.bt_search.setToolTip(_translate("Form", " Search"))
+        self.lblName.setToolTip(_translate("Form", "Nickname"))
+        self.lblId.setToolTip(_translate("Form", "Account Number"))
+        self.closeBt.setToolTip(_translate("Form", "Exit"))
+        self.minBt.setToolTip(_translate("Form", "Minimize"))
+        self.setupBt.setToolTip(_translate("Form", "Setting"))
+        self.bt_adduser.setToolTip(_translate("Form", "Add friend"))
 

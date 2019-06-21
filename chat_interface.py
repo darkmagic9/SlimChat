@@ -79,7 +79,7 @@ class FeedBackUI(QWidget, Ui_Form_For_Chat):
                             )
 
 
-        self.m_textEdt.setPlaceholderText("请在此输入消息:")
+        self.m_textEdt.setPlaceholderText("Please enter a message here:")
         #self.m_textEdt.setFixedHeight(180*self.hf)
 
         #self.m_mainLayout.setContentsMargins(0,0,0,0)
@@ -94,7 +94,7 @@ class FeedBackUI(QWidget, Ui_Form_For_Chat):
         self.his_msgbt.clicked.connect(self.showHistoryMsg)
 
     def sendPic(self):
-        file = QFileDialog.getOpenFileName(self, '选择图片', './img', ("Images (*.png *.jpg *.bmp)"))
+        file = QFileDialog.getOpenFileName(self, 'Select Image', './img', ("Images (*.png *.jpg *.bmp)"))
         if file[0]:
             with open(file[0], 'rb') as f:
                 pic = f.read()
@@ -103,7 +103,7 @@ class FeedBackUI(QWidget, Ui_Form_For_Chat):
 
 
     def sendFile(self):
-        file = QFileDialog.getOpenFileName(self, '选择文件', '.', ("(*.*)"))
+        file = QFileDialog.getOpenFileName(self, 'Select the file', '.', ("(*.*)"))
         if file[0]:
             self.sendFileSignal.emit(self.id, file[0])
 
@@ -186,8 +186,8 @@ class FeedBackUI(QWidget, Ui_Form_For_Chat):
 
     def notOnline(self):
         self.notOnlineLabel = QLabel(self.m_listWgt)
-        self.notOnlineLabel.setText("对方不在线上！请在对方在线时再发送信息！")
-        self.cache += "对方不在线上！请在对方在线时再发送信息！\n"
+        self.notOnlineLabel.setText("The other party is not online! Please send the message when the other party is online!")
+        self.cache += "The other party is not online! Please send the message when the other party is online!\n"
         self.notOnlineLabel.setFixedHeight(30)
         self.notOnlineLabel.setAlignment(Qt.AlignCenter)
         self.item = QListWidgetItem(self.m_listWgt)

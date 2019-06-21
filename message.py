@@ -22,32 +22,32 @@ class Message(QWidget, Ui_Form):
 	def initUI(self, name, id, type, data):
 		self.time.setText(QTime.currentTime().toString(Qt.DefaultLocaleLongDate))
 		if type == Type.RF_ADD:
-			self.name_and_id.setText("%s (%s)拒绝了添加你为好友！"%(name, id))
+			self.name_and_id.setText("%s (%s)Refused to add you as a friend!"%(name, id))
 			self.count.setText('')
 		elif type == Type.AC_ADD:
-			self.name_and_id.setText("%s (%s)接受了你的好友申请！"%(name, id))
+			self.name_and_id.setText("%s (%s)Accept your friend's application!"%(name, id))
 			self.count.setText('')
 		elif type == Type.BE_ADDED:
-			self.name_and_id.setText("%s (%s)发来添加好友请求！"%(name, id))
+			self.name_and_id.setText("%s (%s)Send a friend request!"%(name, id))
 			self.count.setText('')
 		elif type == Type.BE_DELED:
-			self.name_and_id.setText("%s (%s)已把你删除！"%(name, id))
+			self.name_and_id.setText("%s (%s)Have deleted you!"%(name, id))
 			self.count.setText('')
 		elif type == Type.GROUP_CREATE_OK:
-			self.name_and_id.setText("群组创建成功，群号为%s"%(id))
+			self.name_and_id.setText("The group was created successfully. Group number is %s"%(id))
 			self.count.setText('')
 		elif type == Type.GROUP_ADD_OK:
-			self.name_and_id.setText("加入群组%s成功，群号为%s"%(name, id))
+			self.name_and_id.setText("Join group %s success，Group number is %s"%(name, id))
 			self.count.setText('')
 		elif type == Type.GROUP_NOEXIST:
-			self.name_and_id.setText("群组%d不存在！"%(id))
+			self.name_and_id.setText("Group %d does not exist!"%(id))
 		elif type == Type.GROUP_TEXT or type == Type.GROUP_PIC:
-			self.name_and_id.setText("群组 %s (%s) 有消息！"%(name, id))
+			self.name_and_id.setText("Group %s (%s) You got news!"%(name, id))
 			self.count.setText('1')
 		elif type == Type.FILE:
-			self.name_and_id.setText("好友 %s (%s) 发来文件！"%(name, id))
+			self.name_and_id.setText("Friend %s (%s)Send a file!"%(name, id))
 		else:
-			self.name_and_id.setText("好友 %s (%s)发来消息！"%(name, id))
+			self.name_and_id.setText("Friend %s (%s) Send a message!"%(name, id))
 			self.count.setText('1')
 
 

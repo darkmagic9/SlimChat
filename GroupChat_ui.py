@@ -105,10 +105,10 @@ class Ui_Form_For_GroupChat(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.s_pic.setToolTip(_translate("Form", "发送图片"))
+        self.s_pic.setToolTip(_translate("Form", "send pictures"))
         #self.s_file.setToolTip(_translate("Form", "发送文件"))
-        self.closeBt.setToolTip(_translate("Form", "关闭"))
-        self.recordBt.setToolTip(_translate("Form", "查看历史消息"))
-        self.label.setText(_translate("Form", "群成员"))
-        self.m_submitBtn.setText(_translate("Form", "发送"))
+        self.closeBt.setToolTip(_translate("Form", "Exit"))
+        self.recordBt.setToolTip(_translate("Form", "View history news"))
+        self.label.setText(_translate("Form", "Group member"))
+        self.m_submitBtn.setText(_translate("Form", "Send"))
 

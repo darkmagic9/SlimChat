@@ -37,7 +37,7 @@ class SetInfoDialog(QDialog, Ui_Dialog_For_Setinfo):
 
 
 	def scanPicClicked(self):
-		fname = QFileDialog.getOpenFileName(self, '打开文件','./res/user/',("Images (*.png *.jpg *.bmp)"))
+		fname = QFileDialog.getOpenFileName(self, 'Open a file','./res/user/',("Images (*.png *.jpg *.bmp)"))
 		if fname[0]:
 			self.iconpath = fname[0]
 			self.lblhead.setPixmap(QPixmap(fname[0]))
@@ -72,7 +72,7 @@ class SetInfoDialog(QDialog, Ui_Dialog_For_Setinfo):
 					self.client.head = pic.read()
 			self.done(1)
 		else:
-			QMessageBox.information(self, '提示', '昵称不能为空！')
+			QMessageBox.information(self, 'Prompt', 'Username can not be blank!')
 		
 
 

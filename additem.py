@@ -111,18 +111,18 @@ class Dialog_additem(QDialog, Ui_Dialog_For_Additem):
         # TODO: not implemented yet
         # raise NotImplementedError
         if len(self.lineEdit.text()) == 0:
-            QMessageBox.information(self,'提示','好友姓名为空')
+            QMessageBox.information(self,'Prompt','Friend name is empty')
             self.lineEdit.setFocus()
         elif self.lineEdit.text().isdigit() == False:
-            QMessageBox.critical(self, '提示', '个人账号应该为数字，请重新输入！')
+            QMessageBox.critical(self, 'Prompt', 'Personal account number should be a number, please re-enter!')
         else:
             users = []
             for user in self.userslist:
                 users.append(user['userid'])
             if int(self.lineEdit.text()) == self.self_id:
-                QMessageBox.information(self, '提示', '不能添加自己为好友！')
+                QMessageBox.information(self, 'Prompt', 'Can\'t add yourself as a friend!')
             elif int(self.lineEdit.text()) in users:
-                QMessageBox.information(self, '提示', '联系人已存在好友列表中！')
+                QMessageBox.information(self, 'Prompt', 'The contact already exists in the buddy list!')
             else:
                 self.des_id[0] = int(self.lineEdit.text())
                 self.temp[int(self.lineEdit.text())] =  self.comboBox.currentText()

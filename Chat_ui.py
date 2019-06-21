@@ -22,7 +22,7 @@ class Ui_Form_For_Chat(object):
         self.his_msgbt.setGeometry(QtCore.QRect(700, 520, 51, 51))
         self.his_msgbt.setText("")
         self.his_msgbt.setIcon(QtGui.QIcon("img/history.png"))
-        self.his_msgbt.setToolTip("查看历史消息")
+        self.his_msgbt.setToolTip("View history news")
         self.his_msgbt.setAutoRaise(True)
         self.s_pic = QtWidgets.QToolButton(Form)
         self.s_pic.setGeometry(QtCore.QRect(0, 520, 51, 51))
@@ -90,11 +90,11 @@ class Ui_Form_For_Chat(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.s_pic.setToolTip(_translate("Form", "发送图片"))
-        self.s_file.setToolTip(_translate("Form", "发送文件"))
-        self.m_submitBtn.setToolTip(_translate("Form", "发送"))
-        self.m_submitBtn.setText(_translate("Form", "发送"))
-        self.closeBt.setToolTip(_translate("Form", "关闭"))
+        self.s_pic.setToolTip(_translate("Form", "Send Pictures"))
+        self.s_file.setToolTip(_translate("Form", "Send File"))
+        self.m_submitBtn.setToolTip(_translate("Form", "Send"))
+        self.m_submitBtn.setText(_translate("Form", "Send"))
+        self.closeBt.setToolTip(_translate("Form", "Exit"))
         self.closeBt.setText(_translate("Form", "..."))
-        self.minBt.setToolTip(_translate("Form", "最小化"))
+        self.minBt.setToolTip(_translate("Form", "Minimize"))
 

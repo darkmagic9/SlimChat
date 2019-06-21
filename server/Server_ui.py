@@ -41,7 +41,7 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "服务器"))
         self.pushButton.setText(_translate("Form", "启动"))
-        self.pushButton_2.setText(_translate("Form", "关闭"))
+        self.pushButton_2.setText(_translate("Form", "Exit"))
         self.label.setText(_translate("Form", "服务器IP"))
         self.label_2.setText(_translate("Form", "服务器端口"))
 

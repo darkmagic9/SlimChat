@@ -31,7 +31,7 @@ class AddGroup(QDialog, Ui_Dialog_For_AddGroup):
 
 
 	def scanPicClicked(self):
-		fname = QFileDialog.getOpenFileName(self, '打开文件','./res/user/',("Images (*.png *.jpg *.bmp)"))
+		fname = QFileDialog.getOpenFileName(self, 'Open a file','./res/user/',("Images (*.png *.jpg *.bmp)"))
 		if fname[0]:
 			self.iconpath = fname[0]
 			self.lblhead.setPixmap(QPixmap(fname[0]))
@@ -45,18 +45,18 @@ class AddGroup(QDialog, Ui_Dialog_For_AddGroup):
 			self.groupTemp.append((self.editName.text(), self.head))
 			self.done(1)
 		else:
-			QMessageBox.information(self, '提示', '群名不能为空！')
+			QMessageBox.information(self, 'Prompt', 'The group name cannot be empty!')
 
 
 	def pbAddClicked(self):
 		if len(self.editId.text()) == 0:
-			QMessageBox.information(self,'提示','群组账号为空')
+			QMessageBox.information(self,'Prompt','Group account is empty')
 			self.editId.setFocus()
 		elif self.editId.text().isdigit() == False:
-			QMessageBox.critical(self, '提示', '群组账号应该为数字，请重新输入！')
+			QMessageBox.critical(self, 'Prompt', 'The group account number should be a number, please re-enter!')
 		else:
 			if int(self.editId.text()) in self.my_groups:
-				QMessageBox.information(self, '提示', '该群已存在群组列表中！')
+				QMessageBox.information(self, 'Prompt', 'This group already exists in the group list!')
 			else:
 				#self.des_id[0] = int(self.lineEdit.text())
 				self.addTemp.append(int(self.editId.text()))

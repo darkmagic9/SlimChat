@@ -52,7 +52,7 @@ class TIM(QWidget, Ui_Form_For_Main):
 		self.setWindowIcon(QIcon('img/bubbles-alt-icon.png'))
 		
 		palette = QPalette()
-		palette.setBrush(self.backgroundRole(), QtGui.QBrush(QtGui.QPixmap('img/back.gif')))
+		palette.setBrush(self.backgroundRole(), QtGui.QBrush(QtGui.QPixmap('img/background/bg1.jpg')))
 		self.setPalette(palette)
 
 
@@ -127,8 +127,8 @@ class TIM(QWidget, Ui_Form_For_Main):
 		self.treeWidget.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 		self.treeWidget.setSelectionMode(QAbstractItemView.ExtendedSelection)
 
-		self.creategroup()
-		self.initGroup()
+		# self.creategroup()
+		# self.initGroup()
 		
 		
 
@@ -655,16 +655,16 @@ class TIM(QWidget, Ui_Form_For_Main):
 		widget = QApplication.widgetAt(x, y)
 		if type(widget) == Group:
 			menu = QMenu(self)
-			pDeleteAct = QAction('删除分组', self.groups)
+			pDeleteAct = QAction('Delete group', self.groups)
 			menu.addAction(pDeleteAct)
 			pDeleteAct.triggered.connect(self.delGroup)
 			menu.popup(self.mapToGlobal(event.pos()))
 		elif type(widget) == QWidget:
 			hititem = self.treeWidget.currentItem()
 			pgroupmenu = QMenu(self)
-			pAddgroupAct = QAction('添加分组', self.treeWidget)
-			pRenameAct = QAction('重命名', self.treeWidget)
-			pDeleteAct = QAction('删除分组', self.treeWidget)
+			pAddgroupAct = QAction('Add group', self.treeWidget)
+			pRenameAct = QAction('Rename', self.treeWidget)
+			pDeleteAct = QAction('Delete group', self.treeWidget)
 			pgroupmenu.addAction(pAddgroupAct)
 			pgroupmenu.addAction(pRenameAct)
 			pgroupmenu.addAction(pDeleteAct)
@@ -682,11 +682,11 @@ class TIM(QWidget, Ui_Form_For_Main):
 			root = hititem.parent()
 			if root.childCount() > 0:
 				pItemmenu = QMenu(self)
-				pDeleteItemAct = QAction('删除联系人', pItemmenu)
+				pDeleteItemAct = QAction('Delete contact', pItemmenu)
 				pItemmenu.addAction(pDeleteItemAct)
 				pDeleteItemAct.triggered.connect(self.delete)
 				if len(self.grouplist) > 1:
-					pSubMenu = QMenu('转移联系人至', pItemmenu)
+					pSubMenu = QMenu('Transfer contacts to', pItemmenu)
 					pItemmenu.addMenu(pSubMenu)
 					for item_dic in self.grouplist:
 						if item_dic['group'] is not root:
@@ -694,15 +694,15 @@ class TIM(QWidget, Ui_Form_For_Main):
 							pSubMenu.addAction(pMoveAct)
 							pMoveAct.triggered.connect(self.moveItem)
 				if len(self.getListitems(self.menuflag)) == 1:
-					pRenameItemAct = QAction('设定备注', pItemmenu)
+					pRenameItemAct = QAction('Setting note', pItemmenu)
 					pItemmenu.addAction(pRenameItemAct)
 					pRenameItemAct.triggered.connect(self.renameItem)
 				if self.menuflag > 0 and root.childCount() > 1:
-					pBatchAct= QAction('分组内批量操作', pItemmenu)
+					pBatchAct= QAction('Batch operation within a group', pItemmenu)
 					pItemmenu.addAction(pBatchAct)
 					pBatchAct.triggered.connect(self.Batchoperation)
 				elif self.menuflag < 0:
-					pCancelBatchAct = QAction('取消批量操作', pItemmenu)
+					pCancelBatchAct = QAction('Cancel batch operation', pItemmenu)
 					pItemmenu.addAction(pCancelBatchAct)
 					pCancelBatchAct.triggered.connect(self.CancelBatchoperation)
 

@@ -194,7 +194,7 @@ class Ui_Form_For_Cache(object):
         self.friends.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.friends.setObjectName("friends")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("img/好友消息.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("img/Friend message.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.tabWidget.addTab(self.friendMsg, icon2, "")
         self.SysMsg = QtWidgets.QWidget()
         self.SysMsg.setObjectName("SysMsg")
@@ -214,7 +214,7 @@ class Ui_Form_For_Cache(object):
         self.group.setObjectName("group")
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap("img/group.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.tabWidget.addTab(self.GroupMsg, icon4, "群组消息")
+        self.tabWidget.addTab(self.GroupMsg, icon4, "Group message")
 
 
         self.retranslateUi(Form)
@@ -226,10 +226,10 @@ class Ui_Form_For_Cache(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.closeBt.setToolTip(_translate("Form", "关闭"))
-        self.minBt.setToolTip(_translate("Form", "关闭"))
-        self.title.setText(_translate("Form", "消息盒子"))
-        self.tabWidget.setToolTip(_translate("Form", "消息盒子"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.friendMsg), _translate("Form", "好友消息"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.SysMsg), _translate("Form", "系统消息"))
+        self.closeBt.setToolTip(_translate("Form", "Exit"))
+        self.minBt.setToolTip(_translate("Form", "Exit"))
+        self.title.setText(_translate("Form", "Message box"))
+        self.tabWidget.setToolTip(_translate("Form", "Message box"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.friendMsg), _translate("Form", "Friend message"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.SysMsg), _translate("Form", "System Information"))
 

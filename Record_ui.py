@@ -38,5 +38,5 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.closeBt.setToolTip(_translate("Form", "关闭"))
+        self.closeBt.setToolTip(_translate("Form", "Exit"))
 

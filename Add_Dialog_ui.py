@@ -56,9 +56,9 @@ class Ui_Dialo(object):
     def retranslateUi(self, Dialo):
         _translate = QtCore.QCoreApplication.translate
         Dialo.setWindowTitle(_translate("Dialo", "Dialog"))
-        self.lineEdit.setToolTip(_translate("Dialo", "请输入用户账号"))
-        self.closeBt.setToolTip(_translate("Dialo", "关闭"))
-        self.pbAdd.setText(_translate("Dialo", "确认"))
-        self.label_2.setText(_translate("Dialo", "设置好友昵称"))
-        self.label_3.setText(_translate("Dialo", "联系人分组"))
+        self.lineEdit.setToolTip(_translate("Dialo", "Please enter a user account"))
+        self.closeBt.setToolTip(_translate("Dialo", "Exit"))
+        self.pbAdd.setText(_translate("Dialo", "Confirm"))
+        self.label_2.setText(_translate("Dialo", "Set friend nickname"))
+        self.label_3.setText(_translate("Dialo", "Contact grouping"))
 

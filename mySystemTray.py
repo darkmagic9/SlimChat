@@ -12,14 +12,14 @@ class MySystemTray(QSystemTrayIcon, QWidget):
 	def initUi(self):
 		self.setIcon(QIcon('img/bubbles-alt-icon.png'))
 		self.show()
-		minAction = QAction("最小化", self.parent, triggered=self.parent.showMinimized)
-		openAction = QAction("打开主面板", self.parent, triggered=self.parent.show)
-		quitAction = QAction("退出", self.parent, triggered=self.parent.close)
-		setupAction = QAction("设置", self.parent, triggered=self.parent.setUp)
-		changeFaceAction = QAction("换肤", self.parent, triggered=self.parent.changeFace)
-		addFriendAction = QAction("添加好友", self.parent, triggered=self.parent.on_bt_adduser_clicked)
-		cacheAction = QAction("打开消息盒子", self.parent, triggered=self.parent.msgCache)
-		groupAction = QAction("新建或加入群组", self.parent, triggered=self.parent.addGroup)
+		minAction = QAction("Minimize", self.parent, triggered=self.parent.showMinimized)
+		openAction = QAction("Open the main panel", self.parent, triggered=self.parent.show)
+		quitAction = QAction("Quit", self.parent, triggered=self.parent.close)
+		setupAction = QAction("Setting", self.parent, triggered=self.parent.setUp)
+		changeFaceAction = QAction("Skinning", self.parent, triggered=self.parent.changeFace)
+		addFriendAction = QAction("Add friend", self.parent, triggered=self.parent.on_bt_adduser_clicked)
+		cacheAction = QAction("Open message box", self.parent, triggered=self.parent.msgCache)
+		groupAction = QAction("Create or join a group", self.parent, triggered=self.parent.addGroup)
 		trayMenu = QMenu(self.parent) #这里的参数需要测试！
 		trayMenu.addAction(minAction)
 		trayMenu.addAction(openAction)
@@ -30,9 +30,9 @@ class MySystemTray(QSystemTrayIcon, QWidget):
 		trayMenu.addAction(cacheAction)
 		trayMenu.addAction(groupAction)
 		self.setContextMenu(trayMenu)
-		self.setToolTip("SlimChat\n账号：%s\n昵称：%s\n在线"%(self.parent.client.id, self.parent.client.name))
+		self.setToolTip("SlimChat\naccount number：%s\nnickname：%s\nOnline"%(self.parent.client.id, self.parent.client.name))
 		self.activated.connect(self.trayClicked)
-		self.showMessage("消息", '已上线！')
+		self.showMessage("Message", 'Go online!')
 
 
 

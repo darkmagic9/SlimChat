@@ -88,7 +88,7 @@ class GroupChat(QWidget, Ui_Form_For_GroupChat):
                             )
 
 
-        self.m_textEdt.setPlaceholderText("请在此输入消息:")
+        self.m_textEdt.setPlaceholderText("Please enter a message here:")
         
 
         #self.m_textEdt.setFixedHeight(180*self.hf)
@@ -109,7 +109,7 @@ class GroupChat(QWidget, Ui_Form_For_GroupChat):
 
 
     def sendPic(self):
-        file = QFileDialog.getOpenFileName(self, '选择图片', './img', ("Images (*.png *.jpg *.bmp)"))
+        file = QFileDialog.getOpenFileName(self, 'Select Image', './img', ("Images (*.png *.jpg *.bmp)"))
         if file[0]:
             with open(file[0], 'rb') as f:
                 pic = f.read()

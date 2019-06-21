@@ -235,13 +235,13 @@ class Cache(QWidget, Ui_Form_For_Cache):
 		elif widget.type == Type.RF_ADD:
 			self.parent.dealRefuseAdd(widget.id)
 		elif widget.type == Type.BE_DELED:
-			QMessageBox.information(self, '提示', '账号为%s(%s)用户已把你删除！'%(widget.name, widget.id))
+			QMessageBox.information(self, 'Prompt', 'Account number is %s(%s) The user has deleted you!'%(widget.name, widget.id))
 		elif widget.type == Type.GROUP_ADD_OK:
-			QMessageBox.information(self, '提示', "加入群组%s成功，群号为%s"%(widget.name, widget.id))
+			QMessageBox.information(self, 'Prompt', "Join group %s Success, group number is %s"%(widget.name, widget.id))
 		elif widget.type == Type.GROUP_NOEXIST:
-			QMessageBox.information(self, '提示', "群组%d不存在！"%(widget.id))
+			QMessageBox.information(self, 'Prompt', "Group %d does not exist!"%(widget.id))
 		elif widget.type == Type.GROUP_CREATE_OK:
-			QMessageBox.information(self, '提示', "群组创建成功，群号为%s"%(widget.id))
+			QMessageBox.information(self, 'Prompt', "The group was created successfully and the group number is %s"%(widget.id))
 
 
 
