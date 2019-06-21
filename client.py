@@ -27,8 +27,8 @@ class Client():
 		try:
 			self.sock.connect((self.host, self.port))
 		except:
-			# QMessageBox.warning(None, 'Error', 'Unable to connect to the server, Please check the configuration file for errors!')
-			return True
+			QMessageBox.warning(None, 'Error', 'Unable to connect to the server, Please check the configuration file for errors!')
+			return False
 		return True
 
 
@@ -261,15 +261,15 @@ class Client():
 		info = json.dumps(info).encode('utf-8')
 		protocol = Protocol(len(info), TEMP_ID, HOST_ID, Type.LOGIN)
 		header = protocol.make_packet_header()
-		# self.sock.sendall(header+info)
+		self.sock.sendall(header+info)
 
-		# data = self.sock.recv(HEADER_SIZE)
-		# size, src_id, des_id, type = struct.unpack(HEADER_FORM, data)
-		type = Type.OK
+		data = self.sock.recv(HEADER_SIZE)
+		size, src_id, des_id, type = struct.unpack(HEADER_FORM, data)
+		# type = Type.OK
 		if type == Type.OK:
-			self.id = 1#des_id
-			self.name = 'test'#self.dealGetSelfName()
-			# self.head = self.dealGetHead(self.id)                                   ############################处理登录时初始化用户头像！！
+			self.id = des_id
+			self.name = self.dealGetSelfName()
+			self.head = self.dealGetHead(self.id)                                   ############################处理登录时初始化用户头像！！
 		return type
 
 	def dealGetHead(self, id):

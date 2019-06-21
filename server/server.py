@@ -42,7 +42,7 @@ class Server(QWidget, Ui_Form):
 
 
 	def startServer(self):
-		self.textBrowser.append("成功启动服务器！\n")
+		self.textBrowser.append("Successfully start the server!\n")
 		self.lineEdit.setEnabled(False)
 		self.lineEdit_2.setEnabled(False)
 		self.pushButton.setEnabled(False)
@@ -77,7 +77,7 @@ class Server(QWidget, Ui_Form):
 
 
 	def closeEvent(self, event):
-		reply = QMessageBox.question(self, '提示', '确定要退出程序吗？', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+		reply = QMessageBox.question(self, 'Prompt', 'Are you sure you want to quit the program?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
 		if reply == QMessageBox.No:
 			event.ignore()
 		else:
@@ -101,7 +101,7 @@ class Server(QWidget, Ui_Form):
 	def waitForConnection(self):
 		while True:
 			clientSock, clientAddr = self.sock.accept()
-			self.textBrowser.append('%s : %s连接服务器。\n'%clientAddr)
+			self.textBrowser.append('%s : %s connect to the server.\n'%clientAddr)
 			deal = Thread(target=self.dealEachClient, args=(clientSock, clientAddr))
 			deal.start()
 

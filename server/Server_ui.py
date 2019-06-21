@@ -39,9 +39,9 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "服务器"))
-        self.pushButton.setText(_translate("Form", "启动"))
+        Form.setWindowTitle(_translate("Form", "Server"))
+        self.pushButton.setText(_translate("Form", "Start"))
         self.pushButton_2.setText(_translate("Form", "Exit"))
-        self.label.setText(_translate("Form", "服务器IP"))
-        self.label_2.setText(_translate("Form", "服务器端口"))
+        self.label.setText(_translate("Form", "Server IP"))
+        self.label_2.setText(_translate("Form", "Server port"))
 
