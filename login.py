@@ -55,21 +55,21 @@ class LoginDialog(QDialog, Ui_Dialog_For_Login):
 
 	def login(self):
 		if  len(self.editName.text()) == 0 or len(self.editPwd.text()) == 0:
-			QMessageBox.critical(self, '错误', '账号或密码不能为空！请重新输入！')
+			QMessageBox.critical(self, 'Error', 'Account or password cannot be empty! please enter again!')
 		elif self.editName.text().isdigit() == False:
-			QMessageBox.critical(self, '错误', '输入的账号应该是数字！请重新输入！')
+			QMessageBox.critical(self, 'Error', 'The account number entered should be a number! please enter again!')
 		elif client.connectToServer():
 			respond = client.dealLogin(int(self.editName.text()), self.editPwd.text())
 			if respond == Type.OK:
 				self.accept()
 			elif respond == Type.FAIL:
-				QMessageBox.critical(self, '错误', '密码和密码不匹配！请重新输入！')
+				QMessageBox.critical(self, 'Error', 'The password and password do not match! please enter again!')
 				client.sock.close()
 			elif respond == Type.REPEAT:
 				client.sock.close()
-				QMessageBox.critical(self, '提示', '该账户已在线上，不可多次登录同一个账号！')
+				QMessageBox.critical(self, 'Prompt', 'The account is online and cannot be logged in to the same account multiple times!')
 			else:
-				QMessageBox.critical(self, '提示', '不存在此用户！')
+				QMessageBox.critical(self, 'Prompt', 'this user does not exist!')
 				client.sock.close()
 			
 				

@@ -77,13 +77,13 @@ class Ui_Dialog_For_Setup(object):
     def retranslateUi(self, Dialo):
         _translate = QtCore.QCoreApplication.translate
         Dialo.setWindowTitle(_translate("Dialo", "Dialog"))
-        self.editServerIP.setToolTip(_translate("Dialo", "请输入服务器地址"))
-        self.editServerPort.setToolTip(_translate("Dialo", "请输入服务器端口"))
-        self.closeBt.setToolTip(_translate("Dialo", "关闭"))
-        self.minBt.setToolTip(_translate("Dialo", "最小化"))
-        self.lblSetup.setText(_translate("Dialo", "网络设置"))
-        self.lblIP.setText(_translate("Dialo", "服务器地址："))
-        self.lblPort.setText(_translate("Dialo", "服务器端口："))
-        self.pbCancel.setText(_translate("Dialo", "取消"))
-        self.pbConfirm.setText(_translate("Dialo", "确定"))
+        self.editServerIP.setToolTip(_translate("Dialo", "Please enter the server address"))
+        self.editServerPort.setToolTip(_translate("Dialo", "Please enter the server port"))
+        self.closeBt.setToolTip(_translate("Dialo", "Exit"))
+        self.minBt.setToolTip(_translate("Dialo", "Minimize"))
+        self.lblSetup.setText(_translate("Dialo", "Network settings"))
+        self.lblIP.setText(_translate("Dialo", "Server address :"))
+        self.lblPort.setText(_translate("Dialo", "Server port :"))
+        self.pbCancel.setText(_translate("Dialo", "Cancel"))
+        self.pbConfirm.setText(_translate("Dialo", "Confirm"))
 

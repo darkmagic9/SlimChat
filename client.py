@@ -27,7 +27,7 @@ class Client():
 		try:
 			self.sock.connect((self.host, self.port))
 		except:
-			QMessageBox.warning(None, '错误', '无法连接服务器，请检查配置文件是否出错！')
+			QMessageBox.warning(None, 'Error', 'Unable to connect to the server, Please check the configuration file for errors!')
 			return False
 		return True
 

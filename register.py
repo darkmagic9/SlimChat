@@ -50,7 +50,7 @@ class RegisterDialog(QDialog, Ui_Dialog_For_Register):
 			self.scanPic.setEnabled(True)
 
 	def scanPicClicked(self):
-		fname = QFileDialog.getOpenFileName(self, '打开文件','./res/user/',("Images (*.png *.jpg *.bmp)"))
+		fname = QFileDialog.getOpenFileName(self, 'Open a file','./res/user/',("Images (*.png *.jpg *.bmp)"))
 		if fname[0]:
 			self.iconpath = fname[0]
 			self.label.setPixmap(QPixmap(fname[0]))
@@ -82,14 +82,14 @@ class RegisterDialog(QDialog, Ui_Dialog_For_Register):
 		self.text2 = self.editRepPwd.text()
 		if self.text1 == self.text2:
 			if len(self.text1) == 0:
-				QMessageBox.warning(self, '警告', '密码为空!')
+				QMessageBox.warning(self, 'Warning', 'The password is empty!')
 			elif len(self.text1) < 6:
-				QMessageBox.warning(self, '警告', '密码长度低于6位！')
+				QMessageBox.warning(self, 'Warning', 'The password length is less than 6 digits!')
 			else:
 				if self.client.connectToServer():
 					response, id = self.client.dealRegister(self.editName.text(), self.editPwd.text(), )
 					if response == Type.OK:
-						QMessageBox.information(self, '消息', '注册成功！\n请记住您新注册的账号：%s'%(id))
+						QMessageBox.information(self, 'Message', 'Registration Success!\nPlease remember your newly registered account :%s'%(id))
 						self.client.id = id
 						self.client.name = self.editName.text()
 						with open(self.iconpath, 'rb') as pic:
@@ -97,10 +97,10 @@ class RegisterDialog(QDialog, Ui_Dialog_For_Register):
 						self.client.dealSetHead()
 						self.done(1) #结束对话框返回1
 					else:
-						QMessageBox.information(self, '消息', '注册失败！')
+						QMessageBox.information(self, 'Message', 'Registration Failed!')
 						self.client.close()
 		else:
-			QMessageBox.warning(self, '警告', '两次输入的密码不一致！')
+			QMessageBox.warning(self, 'Warning', 'The passwords entered twice are inconsistent!')
 
 
 	def cancel(self):
