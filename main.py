@@ -45,8 +45,8 @@ class TIM(QWidget, Ui_Form_For_Main):
 		self.Ui_init()
 		self.menuflag = 1
 		self.temp = {}
-		self.groupTemp = [] #新建群id
-		self.addTemp = []#加入群id
+		self.groupTemp = [] #New group id
+		self.addTemp = []#Join the group id
 		
 		self.setStyleSheet(open('styles/style5.qss').read())
 		self.setWindowIcon(QIcon('img/bubbles-alt-icon.png'))
