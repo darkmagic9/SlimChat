@@ -582,7 +582,7 @@ class Server(QWidget, Ui_Form):
 		info = json.loads(info)
 		state =  self.check(info['id'], info['password'])
 		if state == Type.OK:
-			self.textBrowser.append('%s上线了！'%(info['id']))
+			self.textBrowser.append('%s Online!'%(info['id']))
 			protocol = Protocol(0, HOST_ID, info['id'], state)
 			header = protocol.make_packet_header()
 			sock.sendall(header)
@@ -621,7 +621,7 @@ class Server(QWidget, Ui_Form):
 				self.onlineClient.remove(c)
 				break
 		self.boardcastOffline(id)
-		self.textBrowser.append('%s下线了'%id)
+		self.textBrowser.append('%s Offline'%id)
 		sock.close()
 		info = list(self.db.cursor().execute("SELECT ID, PASSWORD, NAME, GROUPANDFRIEND FROM USERS WHERE ID=?", (id,)))
 		info = json.loads(info[0][3])
@@ -687,7 +687,7 @@ class Server(QWidget, Ui_Form):
 		self.onlineClient.append(clientInfo)
 
 		#写入数据库
-		group = {'我的好友':[]}
+		group = {'My good friend':[]}
 		group = json.dumps(group)
 		g = []
 		g = json.dumps(g)

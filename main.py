@@ -127,8 +127,8 @@ class TIM(QWidget, Ui_Form_For_Main):
 		self.treeWidget.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 		self.treeWidget.setSelectionMode(QAbstractItemView.ExtendedSelection)
 
-		# self.creategroup()
-		# self.initGroup()
+		self.creategroup()
+		self.initGroup()
 		
 		
 
