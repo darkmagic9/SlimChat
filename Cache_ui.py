@@ -177,7 +177,7 @@ class Ui_Form_For_Cache(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.ToolTipText, brush)
         self.title.setPalette(palette)
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
+        font.setFamily("Tahoma")
         font.setPointSize(18)
         self.title.setFont(font)
         self.title.setObjectName("title")

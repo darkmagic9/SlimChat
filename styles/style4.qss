@@ -31,7 +31,7 @@ QTabBar::tab
 	border: 0px;
 	padding: 2px;
 	background-repeat: fixed;
-	font-family: "微软雅黑";
+	font-family: "Tahoma";
 	margin-left: -8; margin-right: 0;
 }
 QTabBar::tab:selected
@@ -72,7 +72,7 @@ QLabel[statusTip="showlinetable"]:hover
 QLabel[statusTip="redStar"]
 {
 	color:rgb(255,0,0);
-	font-family: 宋体;
+	font-family: Tahoma;
 	font-size:12px;
 	font-weight:bold;
 }
@@ -81,17 +81,17 @@ QLabel[statusTip="numeric"]
     font-family: Arial;
 }
 QPushButton,QLabel,QLineEdit,QTextEdit{
-	font-family: 微软雅黑;
+	font-family: Tahoma;
 }
 #labeltitle,labeltitle_2,labeltitle_3{
-	font-family: 微软雅黑;
+	font-family: Tahoma;
 	color:#56688a;
 	font-size: 16px;
 	font-weight:bold;
 }
 
 QLabel{
-	font-family: 微软雅黑;
+	font-family: Tahoma;
 	color:#56688a; 
 	font-size: 14px;
 	float:right;
@@ -105,7 +105,7 @@ QLabel[statusTip="redStar"]
 #label_addres,#label_organizationscale,#label_organizationtype,#label_industrytype,#label_accounttype
 #label_paymode{
 	color:#7c8ba7;
-	font-family: 微软雅黑;
+	font-family: Tahoma;
 	font-size: 14px;
 }
 #label_accountnum,#label_impowerlimit{
@@ -116,14 +116,14 @@ QLabel[statusTip="redStar"]
 }
 #label_bankplace,#label_dingjiaxishu,#label_payCoupon{
 	color:#a1aab9;
-	font-family: 微软雅黑;
+	font-family: Tahoma;
 	font-size: 14px;
 }	
 #label_fengexian,#label_fengexian2,#label_fengexian3{
 	background-color:#d2d9e5;
 } 
 QComboBox{
-	font-family: 微软雅黑; 
+	font-family: Tahoma; 
 	color:#7c8ba7; 
 	border-radius: 1px; 
 	padding: 1px 2px 1px 10px;  
@@ -148,12 +148,12 @@ QComboBox QAbstractItemView {
 	border:1px solid #7c8ba7;
 	selection-background-color:;
 	color:#7c8ba7 ;
-	font-family: 微软雅黑;
+	font-family: Tahoma;
 	font-size: 14px;
 	background-color:#ffffff;
 }						  
 QLineEdit{
-	font-family: 微软雅黑; 
+	font-family: Tahoma; 
 	color:#7c8ba7;
 	font-size: 14px;  
 	background-color: #ffffff;
@@ -161,7 +161,7 @@ QLineEdit{
 	padding: 1px 2px 1px 10px;
 }
 QTextEdit{
-	font-family: 微软雅黑; 
+	font-family: Tahoma; 
 	color:#7c8ba7;
 	font-size: 14px;  
 	background-color: #ffffff;
@@ -183,7 +183,7 @@ QTextEdit{
 	padding-top:5px;
 }	
 QCheckBox{
-	font-family: 微软雅黑;
+	font-family: Tahoma;
 	color:#56688a; 
 	font-size: 14px;
 	background-color:#fff;
@@ -263,7 +263,7 @@ QTreeWidget::item:hover
 }
 
 QRadioButton{
-	font-family: 微软雅黑; 
+	font-family: Tahoma; 
 	color:#7c8ba7;
 	font-size: 14px;  
 	spacing: 5px;
@@ -299,7 +299,7 @@ QRadioButton::indicator {
 	background-repeat:no-repeat;
  }
 QLineEdit{
-	font-family: 微软雅黑; 
+	font-family: Tahoma; 
 	color:#7c8ba7;
 	font-size: 14px;  
 	background-color: #ffffff;	
