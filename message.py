@@ -3,7 +3,7 @@ from PyQt5.QtCore import QEvent, Qt, QRect, QTime
 from PyQt5.QtGui import QPalette, QPainter, QPixmap, QImage
 from MsgItem_ui import Ui_Form
 from protocol import *
-#头像部分需要修改！！
+#The avatar part needs to be modified! !
 HOST_ID = 0
 class Message(QWidget, Ui_Form):
 
