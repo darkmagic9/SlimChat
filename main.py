@@ -32,8 +32,8 @@ class TIM(QWidget, Ui_Form_For_Main):
 	groupInfo = {}
 	chatWindow = {}
 	groupChatWindow = {}
-	my_groups = [] #保存我所在的群
-	glist = []#保存各个群的所有信息
+	my_groups = [] #Save my group
+	glist = []#Save all information for each group
 
 	def __init__(self, client):
 		super().__init__()
